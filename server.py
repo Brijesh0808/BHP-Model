@@ -1,22 +1,25 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import utils
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='./client')
 
 #Function Decorators
 @app.route('/hello')
 def hello():
 	return 'Hello'
 
+# @app.route("/")
+# def home():
+# 	return """
+# Please choose one of the below url:
+# ../hello
+# ../get_location_names
+# ../predict_home_price
+# 	"""
+
 @app.route("/")
 def home():
-	return """
-Please choose one of the below url:
-../hello
-../get_location_names
-../predict_home_price
-	"""
-
+	return render_template('app.html')
 
 #GET mean to fetch data from Backend to Website
 #POST send the data from webiste forms to Backend
