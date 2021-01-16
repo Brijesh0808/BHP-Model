@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
+<!-- HTML code contains structure of ui/frontend -->
 <head>
     <title>Banglore Home Price Prediction</title>
     <!-- The purpose of jQuery is to make it much easier to use/run JavaScript files on your website. --> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- importing app.js and app.css files here -->
     <script src="app.js"></script>
 	<link rel="stylesheet" href="app.css">
 </head>
@@ -12,8 +15,12 @@
 	<!-- This class "img" is written in css file under .img section --> 
 <div class="img"></div>
 <form class="form">
+
+<!-- Form here our form starts where we will get data from user on UI -->
 	<h2>Area (Square Feet)</h2>
     <input class="area"  type="email" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+
+    <!-- Adding 5 options for BHK i.e. 1-5bhk -->
 	<h2>BHK</h2>
 	<div class="switch-field">
 		<input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
@@ -28,9 +35,13 @@
 		<label for="radio-bhk-5">5</label>
 	</div>
 	</form>
+
 <form class="form">
 	<h2>Bath</h2>
 	<div class="switch-field">
+
+		<!-- Adding 5 options for #bathrooms i.e. 1-5 bathrooms -->
+
 		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
 		<label for="radio-bath-1">1</label>
 		<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
@@ -44,12 +55,17 @@
 	</div>
 		<h2>Location</h2>
 	<div>
+
+	<!-- Data for places, coming from app.js -->
+
   <select class="location" name="" id="uiLocations">
     <option value="" disabled="disabled" selected="selected">Choose a Location</option>
 		<option>Electronic City</option>
         <option>Rajaji Nagar</option>
   </select>
 </div>
+<!--  -->
+<!-- onClickedEstimatePrice() is a JS function to get estimated price after clicking on button -->
 	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
 	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
 </body>

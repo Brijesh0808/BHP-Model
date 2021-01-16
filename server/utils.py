@@ -3,6 +3,7 @@ import json
 import numpy as np
 # from sklearn.linear_model import LinearRegression
 
+# We use double underscores for defining/declaring global variables. 
 __model = None
 __data_columns = None
 __locations = None
