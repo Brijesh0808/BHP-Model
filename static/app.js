@@ -30,8 +30,9 @@ function onClickedEstimatePrice() {
   var location = document.getElementById("uiLocations");
   var estPrice = document.getElementById("uiEstimatedPrice");
 
-  var url = "http://127.0.0.1:5000/predict_home_price"; //Use this if you are NOT using nginx which is first 7 tutorials
+  //var url = "http://127.0.0.1:5000/predict_home_price"; //Use this if you are NOT using nginx which is first 7 tutorials
   //var url = "/api/predict_home_price"; // Use this if  you are using nginx. i.e tutorial 8 and onwards
+  var url = "https://banglore-prop-price-pred.herokuapp.com/predict_home_price";
 
 //making a post call to the url for price prediction.
   $.post(url, {
@@ -54,8 +55,9 @@ function onClickedEstimatePrice() {
 
 function onPageLoad() {
   console.log( "document loaded" );
-  var url = "http://127.0.0.1:5000/get_location_names"; // Use this if you are NOT using nginx which is first 7 tutorials
+  //var url = "http://127.0.0.1:5000/get_location_names"; // Use this if you are NOT using nginx which is first 7 tutorials
   //var url = "/api/get_location_names"; // Use this if  you are using nginx. i.e tutorial 8 and onwards
+  var url = "https://banglore-prop-price-pred.herokuapp.com/get_location_names";
 
   //making get call to the url. So in return we will get all the locations. 'data' var will have the response stored.
   $.get(url,function(data, status) {
